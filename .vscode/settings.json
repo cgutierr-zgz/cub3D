@@ -1,0 +1,13 @@
+{
+	"files.associations": {
+		"cub.h": "c",
+		"mlx.h": "c",
+		"ios": "cpp",
+		"climits": "cpp",
+		"sstream": "cpp",
+		"streambuf": "cpp",
+		"libft.h": "c",
+		"vector": "cpp",
+		"cub_bonus.h": "c"
+	}
+}
