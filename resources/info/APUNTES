@@ -82,7 +82,7 @@ que devolver “Error\n” seguido de un mensaje explícito que Ud. elegirá.
 12• Puertas que pueden estar abiertas/cerradas.
 13• Puertas secretas. ✔															Se pueden creer muros invisibles que podrían contar como puertas secretas con Enter, a discreción del corrector
 14• Animaciones (disparos o sprites animados). ✔								El sprite del teleport cuenta con una pequeña animación
-15• Varios niveles.																El juego cuenta con un sistema de teleports, lo cual te deja acceder a distintas islas del mapa, lo que podría o no considerarse un nivel extra.
+15• Varios niveles. ✔															El juego cuenta con un sistema de teleports, lo cual te deja acceder a distintas islas del mapa, lo que podría o no considerarse un nivel extra.
 16• Sonido y música. ✔															Hay sonidos cuando: Te hieres, te curas o matas a un enemigo
 17• ¡Armas y malos con los que pelear!. ✔ 										Puedes matar a los enemigos con Enter, se usa una chancla con animación y el enemigo se queda en el suelo muerto
 
