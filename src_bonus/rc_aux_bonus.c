@@ -6,7 +6,7 @@
 /*   By: cgutierr <cgutierr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 18:57:20 by cgutierr          #+#    #+#             */
-/*   Updated: 2021/06/09 14:14:11 by cgutierr         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:23:20 by cgutierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,37 @@ typedef struct s_minimap
 	int	offsety;
 }	t_minimap;
 
+/*
+** ' ' -> Espacio vacío
+** '0' -> Suelo/Techo
+** '1' -> Muros
+** '2' -> Sprites
+** '3' -> Objetos que curan
+** '4' -> Objetos que hieren
+** '5' -> Teleport
+** '9' -> Puertas secretas
+*/
+
+static void	set_color(t_cub *cub, int i, int i2)
+{
+	cub->data.color = 321123321;
+	if (cub->map.map_matrix[i][i2] == '1')
+		cub->data.color = 23132;
+	else if (cub->map.map_matrix[i][i2] == '0')
+		cub->data.color = 45324321;
+	else if (cub->map.map_matrix[i][i2] == '3')
+		cub->data.color = create_trgb(0, 0, 255, 0);
+	else if (cub->map.map_matrix[i][i2] == '4')
+		cub->data.color = create_trgb(0, 255, 0, 0);
+	else if (cub->map.map_matrix[i][i2] == '5')
+		cub->data.color = create_trgb(0, 182, 73, 245);
+	if ((int)cub->raycast.posx == i && (int)cub->raycast.posy == i2)
+		cub->data.color = create_trgb(0, 0, 0, 0);
+}
+
+// SI SE QUIERE 1 PIXEL DE DISTANCIA ENTRE CADA ITEM
+//  draw_n_pixels(4, cub, m.i2 + m.offsetx, m.i + m.offsety);
+
 static void	minimap(t_cub *cub)
 {
 	t_minimap	m;
@@ -51,19 +82,13 @@ static void	minimap(t_cub *cub)
 		m.offsetx = 0;
 		while (m.i2 < cub->map.max_len)
 		{
-			cub->data.color = 321123321;
-			if (cub->map.map_matrix[m.i][m.i2] == '1')
-				cub->data.color = 23132;
-			else if (cub->map.map_matrix[m.i][m.i2] == '0')
-				cub->data.color = 45324321;
-			if ((int)cub->raycast.posx == m.i && (int)cub->raycast.posy == m.i2)
-				cub->data.color = create_trgb(0, 255, 0, 0);
+			set_color(cub, m.i, m.i2);
 			if (cub->map.map_matrix[m.i][m.i2] != ' ')
-				draw_n_pixels(4, cub, m.i2 + m.offsetx, m.i + m.offsety);
+				draw_n_pixels(5, cub, m.offsetx, m.offsety);
 			m.i2++;
-			m.offsetx += 4;
+			m.offsetx += 5;
 		}
-		m.offsety += 4;
+		m.offsety += 5;
 		m.i++;
 	}
 }
