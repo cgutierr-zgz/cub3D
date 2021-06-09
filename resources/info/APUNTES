@@ -71,7 +71,7 @@ que devolver “Error\n” seguido de un mensaje explícito que Ud. elegirá.
 01• Colisión contra los muros. ✔												Colisiona correctamente contra los muros '1'
 02• Una skybox.
 03• Textura sobre el suelo o el techo. ✔										Texturas correctamente colocadas
-04• Un HUD. ✔ 																	Crosshair, barra de vida, info enemigos
+04• Un HUD. ✔ 																	Crosshair, barra de vida, info enemigos, minimapa
 05• Posibilidad de mirar hacia arriba y hacia abajo.
 06• Saltar o agacharse.
 07• Un efecto de sombra basado en la distancia.
@@ -98,6 +98,7 @@ que devolver “Error\n” seguido de un mensaje explícito que Ud. elegirá.
 24• Has ganado/perdido. ✔														Al matar a todos los enemigos el programa te informa, pero puedes seguir jugando, pero al morir el programa te informa y sale limpiamente
 25• Posibilidades de quitar/poner bloques. ✔					 				Se pueden crear "puertas" invisibles/Secretas con la barra espaciadora
 26• Sprite enemigos al morir. ✔													Los enemigos aparecen muertos en lugar de desaparecer
+27• Minimapa. ✔																	Pequeño minimapa que muestra la posición del jugador, enemigos, etc...
 
 	TOTAL: 9/9
 
