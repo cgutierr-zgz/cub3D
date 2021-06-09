@@ -6,7 +6,7 @@
 /*   By: cgutierr <cgutierr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/26 18:57:20 by cgutierr          #+#    #+#             */
-/*   Updated: 2021/06/09 14:23:20 by cgutierr         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:49:12 by cgutierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,10 @@ static void	draw_n_pixels(int n_pixels, t_cub *cub, int i, int i2)
 		x2 = 0;
 		while (x2 < n_pixels)
 		{
-			my_pixel_put(&cub->txtrs.main_img, i + x, i2 + x2 + 125, cub);
+			if ((i + x) < cub->screen.x && (i2 + x2 + 125) < cub->screen.y)
+			{
+				my_pixel_put(&cub->txtrs.main_img, i + x, i2 + x2 + 125, cub);
+			}
 			x2++;
 		}
 		x++;
