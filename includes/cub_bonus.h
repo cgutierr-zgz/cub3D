@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub_bonus.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgutierr <cgutierr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cgutierr <cgutierr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 19:48:39 by cgutierr          #+#    #+#             */
-/*   Updated: 2021/04/26 19:11:02 by cgutierr         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:53:05 by cgutierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@
 # define L_CTRL		256
 # define SPACE		49
 # define ENTER		36
+# define M			46
 // X11 Events
 # define KEY_PRESS				02
 # define KEY_RELEASE			03
@@ -341,6 +342,7 @@ typedef struct s_cub
 	int				num_tp;
 	t_xy			start_tp;
 	t_xy			end_tp;
+	int				show_minimap;
 }	t_cub;
 
 // All functions from src, ordered by type and length

@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   key_presses_extra_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgutierr <cgutierr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cgutierr <cgutierr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 22:43:07 by cgutierr          #+#    #+#             */
-/*   Updated: 2021/04/26 17:16:42 by cgutierr         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:53:57 by cgutierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub_bonus.h"
+
+void	key_m(t_cub *cub)
+{
+	cub->show_minimap = 1;
+}
 
 void	*llamar_system(void *str)
 {

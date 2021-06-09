@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   events_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgutierr <cgutierr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cgutierr <cgutierr@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 16:34:25 by cgutierr          #+#    #+#             */
-/*   Updated: 2021/04/25 15:06:09 by cgutierr         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:54:25 by cgutierr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ int	key_release(int keycode, t_cub *cub)
 		cub->mov.place = 0;
 	if (keycode == K_E)
 		cub->enter_tp = 0;
+	if (keycode == M)
+		cub->show_minimap = 0;
 	return (keycode);
 }
 
@@ -98,5 +100,7 @@ int	keys(int keycode, t_cub *cub)
 		cub->mov.place = 1;
 	if (keycode == K_E && cub->enter_tp == 0)
 		cub->enter_tp = 1;
+	if (keycode == M)
+		cub->show_minimap = 1;
 	return (keycode);
 }
